@@ -9,11 +9,6 @@ public class SaveScore : MonoBehaviour {
 		NCMBObject obj = new NCMBObject ("Score");
 		obj.Add ("name", name);//オブジェクトに名前とスコアを設定
 		obj.Add ("score", score);
-
-		//---ゴーストデータとしてLogを保存する---
-		obj.Add ("Log",Player.posList);
-		//----------------------------------
-
 		obj.SaveAsync ((NCMBException e) => {      
 			if (e != null) {
 				//エラー処理
